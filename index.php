@@ -1,12 +1,13 @@
-<?php 
+<?php namespace app;
 
-error_reporting(E_ALL);
+use app\Config\Bootstrap;
 
-require_once __DIR__.'/src/core/bootstrap.php';
+// error_reporting(E_ALL);
 
-$app = new Bootstrap();
-die('ready');
-return $app->start();
+// global modules declaration
 
-
-\system\core\Config\Load::method();
+// load app bootstrap
+require __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/app/Config/Bootstrap.php';
+$bootstrap = new Bootstrap();
+return $bootstrap::run();
