@@ -1,0 +1,11 @@
+{
+    "name": "yussan/php-mvc-boilerplate",
+    "description": "pure php mvc(model view controller) boilerplate",
+    "authors": [
+        {
+            "name": "yussandeveloper",
+            "email": "yussandeveloper@gmail.com"
+        }
+    ],
+    "require": {}
+}
