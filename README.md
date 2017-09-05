@@ -1,5 +1,5 @@
 # php-mvc-boilerplate
-pure php mvc(model view controller) boilerplate
+Create your own php mvc(model view controller) framework.
 
 
 ## Prerequisites
