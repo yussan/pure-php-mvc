@@ -18,6 +18,6 @@ composer install
 - **Using PHP-CLI** 
 
     run using **php-cli** using this command
-```
-php -S localhost:3000
-```
+    ```
+    php -S localhost:3000
+    ```
