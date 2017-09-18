@@ -1,5 +1,5 @@
-# php-mvc-boilerplate
-Create your own php mvc(model view controller) framework.
+# aoi-php
+PHP micro framework to help build your MVC project with minimal code flow.
 
 
 ## Prerequisites
