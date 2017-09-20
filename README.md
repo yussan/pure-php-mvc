@@ -1,6 +1,7 @@
+![aoi php cover](https://pbs.twimg.com/media/DKKQTInUMAE9xJk.jpg:large)
+
 # aoi-php
 PHP micro framework to help build your MVC project with minimal code flow.
-
 
 ## Prerequisites
 - Composer <a target="_blank" href="https://getcomposer.org/">read more</a>
