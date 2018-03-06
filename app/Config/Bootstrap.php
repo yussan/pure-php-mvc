@@ -9,9 +9,10 @@ class Bootstrap
 		if(!empty($target)) {
 			$controller = $target['controller'];
 			$method = $target['method'];
+			$params = $target['params'];
 			if(class_exists('\app\Controllers\\'.$controller.'Controller')) {
 				if(method_exists('app\Controllers\\'.$controller.'Controller', $method)) {
-					echo call_user_func(array('\app\Controllers\\'.$controller.'Controller', $method));
+					echo call_user_func(array('\app\Controllers\\'.$controller.'Controller', $method), $params);
 				} else {
 					echo 'Page Not Found 404 : Method Not Found in Controller '.$controller;
 				}
@@ -28,10 +29,18 @@ class Bootstrap
 	{
 		// php.net/manual/en/function.explode.php (split in js)
 		$path = explode('/', $_SERVER['PATH_INFO']);
-		// print_r($_SERVER['PATH_INFO']);
+		$params = [];
+		// save params to array
+		if(count($path) > 3) {
+			for($n=3 ; $n < count($path) ; $n++) {
+				array_push($params, $path[$n]);
+			}	
+		}
+		
 		return [
 			'controller' => empty($path[1]) ? 'Home' : ucfirst($path[1]),
-			'method' => empty($path[2]) ? 'index' : $path[2]
+			'method' => empty($path[2]) ? 'index' : $path[2],
+			'params' => $params
 		];
 	}
     

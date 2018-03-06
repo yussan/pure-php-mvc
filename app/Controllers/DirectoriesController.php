@@ -14,8 +14,12 @@ class DirectoriesController {
         return View::display('DirectoryList', $data);
     }
     
-    public function detail(){
-		return '<h1>Directories Detail</h1>';
+    /**
+     * access using sample path /directories/detail/12
+     * @param $params array
+     */
+    public function detail($params){
+		return '<h1>Directories Detail of id : '.$params[0].'</h1>';
 	}
 	
 }
